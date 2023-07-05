@@ -45,11 +45,11 @@ std::optional<HRESULT> D3D9Present(const decltype(PresentHook)& hook, IDirect3DD
         ImGui::SetNextWindowSize(ImVec2(300.f, 100.f), ImGuiCond_FirstUseEver);
         ImGui::Begin("ImGuiTemplate", &ImGuiEnable);
 
-        ImGui::Text(u8"Текст");
+        ImGui::Text(u8"РўРµРєСЃС‚");
         
-        ImGui::InputText(u8"Инпут", ImGuiInputBuffer, sizeof(ImGuiInputBuffer));
+        ImGui::InputText(u8"РРЅРїСѓС‚", ImGuiInputBuffer, sizeof(ImGuiInputBuffer));
 
-        if (ImGui::Button(u8"Нажми чтобы вывести свой текст на экран!")) {
+        if (ImGui::Button(u8"РќР°Р¶РјРё С‡С‚РѕР±С‹ РІС‹РІРµСЃС‚Рё С‚РµРєСЃС‚ РЅР° СЌРєСЂР°РЅ!")) {
             MessageBoxA(**reinterpret_cast<HWND**>(0xC17054), ImGuiInputBuffer, "", MB_OK);
         }
 
